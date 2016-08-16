@@ -109,54 +109,67 @@ title: Codeontap.io framework
     <div class="tabs editable">
       <ul class="tabs-header">
         <li class="tabs-sidebar-title">Sections</li>
-        <li class="repeatable"><a href="#tab-introduction">Introduction</a></li>
-        <li class="repeatable"><a href="#tab-components">Components</a></li>
-        <li class="repeatable"><a href="#tab-code">Code</a></li>
-        <li class="repeatable"><a href="#tab-structure">Structure</a></li>
-        <li class="repeatable"><a href="#tab-files">Files</a></li>
-        <li class="repeatable"><a href="#tab-settings">Settings</a></li>
-        <li class="repeatable"><a href="#tab-other-sections">Other Section here</a></li>
-        <li class="repeatable"><a href="#tab-section-title">Section title</a></li>
-        <li class="repeatable"><a href="#tab-advance">Advance</a></li>
+        {% for tab in site.tabs %}
+          <li><a href="#tab-{{ tab.id | slugify: 'pretty' }}">{{ tab.title }}</a></li>
+        {% endfor %}
       </ul>
       <div class="tabs-container">
-        <div id="tab-introduction" class="tabs-content">
-          Sections
-          <script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>
+        {% for tab in site.tabs %}
+        <div id="tab-{{ tab.id  | slugify: 'pretty' }}" class="tabs-content">
+          {{ tab.content }}
         </div>
-        <div id="tab-components" class="tabs-content">
-          Components
-          <script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>
-        </div>
-        <div id="tab-code" class="tabs-content">
-          Code
-          <script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>
-        </div>
-        <div id="tab-structure" class="tabs-content">
-          Structure
-          <script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>
-        </div>
-        <div id="tab-files" class="tabs-content">
-          Files
-          <script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>
-        </div>
-        <div id="tab-settings" class="tabs-content">
-          Settings
-          <script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>
-        </div>
-        <div id="tab-other-sections" class="tabs-content">
-          Other Section here
-          <script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>
-        </div>
-        <div id="tab-section-title" class="tabs-content">
-          Section title
-          <script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>
-        </div>
-        <div id="tab-advance" class="tabs-content">
-          Advance
-          <script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>
-        </div>
+        {% endfor %}
       </div>
+
+      <!--<li class="tabs-sidebar-title">Sections</li>-->
+        <!--<li class="repeatable"><a href="#tab-introduction">Introduction</a></li>-->
+        <!--<li class="repeatable"><a href="#tab-components">Components</a></li>-->
+        <!--<li class="repeatable"><a href="#tab-code">Code</a></li>-->
+        <!--<li class="repeatable"><a href="#tab-structure">Structure</a></li>-->
+        <!--<li class="repeatable"><a href="#tab-files">Files</a></li>-->
+        <!--<li class="repeatable"><a href="#tab-settings">Settings</a></li>-->
+        <!--<li class="repeatable"><a href="#tab-other-sections">Other Section here</a></li>-->
+        <!--<li class="repeatable"><a href="#tab-section-title">Section title</a></li>-->
+        <!--<li class="repeatable"><a href="#tab-advance">Advance</a></li>-->
+      <!--</ul>-->
+      <!--<div class="tabs-container">-->
+        <!--<div id="tab-introduction" class="tabs-content">-->
+          <!--Sections-->
+          <!--<script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>-->
+        <!--</div>-->
+        <!--<div id="tab-components" class="tabs-content">-->
+          <!--Components-->
+          <!--<script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>-->
+        <!--</div>-->
+        <!--<div id="tab-code" class="tabs-content">-->
+          <!--Code-->
+          <!--<script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>-->
+        <!--</div>-->
+        <!--<div id="tab-structure" class="tabs-content">-->
+          <!--Structure-->
+          <!--<script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>-->
+        <!--</div>-->
+        <!--<div id="tab-files" class="tabs-content">-->
+          <!--Files-->
+          <!--<script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>-->
+        <!--</div>-->
+        <!--<div id="tab-settings" class="tabs-content">-->
+          <!--Settings-->
+          <!--<script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>-->
+        <!--</div>-->
+        <!--<div id="tab-other-sections" class="tabs-content">-->
+          <!--Other Section here-->
+          <!--<script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>-->
+        <!--</div>-->
+        <!--<div id="tab-section-title" class="tabs-content">-->
+          <!--Section title-->
+          <!--<script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>-->
+        <!--</div>-->
+        <!--<div id="tab-advance" class="tabs-content">-->
+          <!--Advance-->
+          <!--<script src="https://gist.github.com/webilhan/3622a2c2139043f29e1e84da281567a5.js"></script>-->
+        <!--</div>-->
+      <!--</div>-->
     </div>
   </div>
 </section>
