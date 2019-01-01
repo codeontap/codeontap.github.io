@@ -2,18 +2,19 @@
     <div class="wrapper">
         <div class="footer-description">
             <a href="/" class="editable footer-logo">Codeontap.io</a>
-            <p class="editable-text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected.</p>
+            <p class="editable-text">Infrastructure-As-Code for the enterprise </p>
         </div>
         <div class="footer-column">
             <div class="footer-column-title editable-text">Quick Links</div>
             <div class="footer-column-content">
                 <ul class="editable">
-                    <li><a href="/download.html">Download</a></li>
-                    <li><a href="/tutorials.html">Tutorials</a></li>
-                    <li><a href="/documentation.html">Documentation</a></li>
+                    <li><a href="https://github.com/codeontap/codeontap">Download</a></li>
+                    <li><a href="https://codeontap.readthedocs.io/en/stable/getting-started/">Tutorials</a></li>
+                    <li><a href="https://codeontap.readthedocs.io/">Documentation</a></li>
                 </ul>
             </div>
         </div>
+        <!--
         <div class="footer-column">
             <div class="footer-column-title editable-text">Community</div>
             <div class="footer-column-content">
@@ -24,21 +25,22 @@
                 </ul>
             </div>
         </div>
+        -->
         <div class="footer-column">
             <div class="footer-column-title editable-text">Get In Touch</div>
             <div class="footer-column-content">
-                <ul class="editable" id="get-in-touch">
+                <!--<ul class="editable" id="get-in-touch">
                     <li><a class="sm-icon" title="Facebook" href="https://www.facebook.com/codeontap" target="_blank"><i class="fa fa-facebook">&nbsp;</i></a></li>
                     <li><a class="sm-icon" title="Twitter" href="https://twitter.com/codeontap" target="_blank"><i class="fa fa-twitter">&nbsp;</i></a></li>
                     <li><a class="sm-icon" title="Google +" href="https://plus.google.com/+codeontap" target="_blank"><i class="fa fa-google-plus">&nbsp;</i></a></li>
-                </ul>
-                <div class="editable"><a href="mailto:hello@codeontap.io" target="_blank">hello@codeontap.io</a></div>
+                </ul>-->
+                <div class="editable"><a href="mailto:{{ site.email }}" target="_blank">{{ site.email }}</a></div>
             </div>
         </div>
     </div>
     <div class="copyright">
         <div class="wrapper">
-            <p class="editable-text">Copyright &copy; 2016. All rights reserve <a href="/">www.codeontop.io</a></p>
+            <p class="editable-text">Copyright &copy; 2016 - {{ site.time | date: '%Y' }}. All rights reserved <a href="/">www.codeontop.io</a></p>
             <div class="editable copyright-links">
                 <a href="/privacy-policy.html">Privacy Policy</a>
                 <a href="/terms-and-conditions.html">Terms and Conditions</a>
